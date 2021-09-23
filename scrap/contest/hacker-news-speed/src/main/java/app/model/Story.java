@@ -19,6 +19,7 @@ public class Story {
 	private long time;
 	private String title;
 	private String type;
+	private String text;
 	private String url;
 	
 }
