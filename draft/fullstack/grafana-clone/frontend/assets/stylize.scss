@@ -1,0 +1,89 @@
+.theme--dark {
+  .v-card {
+    background-color: black !important;
+    border: 2px solid white !important;
+  }
+
+  .v-toolbar {
+    background-color: black !important;
+    border-bottom: 2px solid white !important;
+  }
+
+  .v-navigation-drawer {
+    background-color: black !important;
+    border-right: 2px solid white !important;
+  }
+
+  .v-navigation-drawer {
+    background-color: black !important;
+    border-right: 2px solid white !important;
+  }
+
+  .v-navigation-drawer--right {
+    background-color: black !important;
+    border-left: 2px solid white !important;
+  }
+
+  .v-bottom-navigation {
+    background-color: black !important;
+    border-top: 2px solid white !important;
+  }
+
+  .v-expansion-panel {
+    background-color: black !important;
+  }
+
+  .v-footer {
+    border-top: 2px solid white !important;
+    background-color: black !important;
+  }
+
+  .v-tooltip__content {
+    background-color: black;
+    border: 2px white solid;
+  }
+
+  .v-list {
+    background-color: black !important;
+  }
+}
+
+.theme--light {
+  .v-card {
+    background-color: white !important;
+    border: 2px solid black !important;
+  }
+
+  .v-toolbar {
+    background-color: white !important;
+    border-bottom: 2px solid black !important;
+  }
+
+  .v-navigation-drawer {
+    background-color: white !important;
+    border-right: 2px solid black !important;
+  }
+
+  .v-bottom-navigation {
+    background-color: white !important;
+    border-top: 2px solid black !important;
+  }
+
+  .v-expansion-panel {
+    background-color: white !important;
+  }
+
+  .v-footer {
+    border-top: 2px solid black !important;
+    background-color: white !important;
+  }
+
+  .v-tooltip__content {
+    background-color: white;
+    border: 2px black solid;
+  }
+
+  .v-list {
+    background-color: white !important;
+  }
+}
