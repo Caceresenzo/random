@@ -69,6 +69,10 @@ public class ApiErrorResponseToTextEventStreamMessageConverter implements HttpMe
 	@SuppressWarnings("unchecked")
 	private <T> void writeItem(T data, @Nullable MediaType mediaType, HttpOutputMessage outputMessage) throws IOException {
 		for (HttpMessageConverter<?> converter : httpMessageConverters) {
+			if (converter instanceof ApiErrorResponseToTextEventStreamMessageConverter) {
+				continue;
+			}
+
 			if (!converter.canWrite(data.getClass(), mediaType)) {
 				continue;
 			}
