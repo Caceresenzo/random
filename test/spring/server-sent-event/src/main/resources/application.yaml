@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: demo
+  threads:
+    virtual:
+      enabled: true
+  mvc:
+    async:
+      request-timeout: 600000
+error:
+  handling:
+    add-path-to-error: true
+    exception-logging: message-only
+    full-stacktrace-http-statuses:
+    - 5xx
+    log-levels:
+      4xx: DEBUG
