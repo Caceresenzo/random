@@ -7,6 +7,10 @@ spring:
   mvc:
     async:
       request-timeout: 600000
+  servlet:
+    multipart:
+      file-size-threshold: 0
+      resolve-lazily: false
 error:
   handling:
     add-path-to-error: true

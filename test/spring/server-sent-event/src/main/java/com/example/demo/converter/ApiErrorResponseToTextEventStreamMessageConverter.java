@@ -22,7 +22,8 @@ import io.github.wimdeblauwe.errorhandlingspringbootstarter.ApiErrorResponse;
 @Component
 public class ApiErrorResponseToTextEventStreamMessageConverter implements HttpMessageConverter<ApiErrorResponse> {
 
-	public static final List<MediaType> SUPPORTED_MEDIA_TYPES = Collections.singletonList(MediaType.TEXT_EVENT_STREAM);
+	public static final MediaType MEDIA_TYPE = MediaType.TEXT_EVENT_STREAM;
+	public static final List<MediaType> SUPPORTED_MEDIA_TYPES = Collections.singletonList(MEDIA_TYPE);
 
 	private final List<HttpMessageConverter<?>> httpMessageConverters;
 
@@ -37,7 +38,7 @@ public class ApiErrorResponseToTextEventStreamMessageConverter implements HttpMe
 
 	@Override
 	public boolean canWrite(Class<?> clazz, MediaType mediaType) {
-		return ApiErrorResponse.class.equals(clazz);
+		return ApiErrorResponse.class.equals(clazz) && MEDIA_TYPE.equals(mediaType);
 	}
 
 	@Override
