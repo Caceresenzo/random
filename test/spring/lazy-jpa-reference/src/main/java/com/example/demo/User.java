@@ -8,19 +8,30 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 @Entity
 @Table
 @Data
+@ToString(doNotUseGetters = true)
 @Accessors(chain = true)
 public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	@Column(name = "id")
+	public long idx;
 	
 	@Column
-	private String name;
+	public String name;
+	
+	public long getId() {
+		return idx;
+	}
+	
+	public String getIdAsString() {
+		return String.valueOf(idx);
+	}
 	
 }

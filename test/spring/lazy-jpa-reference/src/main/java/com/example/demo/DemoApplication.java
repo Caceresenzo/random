@@ -28,33 +28,23 @@ public class DemoApplication implements CommandLineRunner {
 
 			User user = userRepository.save(new User().setName("Hello"));
 			
-			postRepository.save(new Post().setUser(user).setContent("Lorem"));
-			postRepository.save(new Post().setUser(user).setContent("Ipsum"));
-
-			user = userRepository.save(new User().setName("World"));
-			
-			postRepository.save(new Post().setUser(user).setContent("meroL"));
-			postRepository.save(new Post().setUser(user).setContent("muspI"));
+			postRepository.save(new Post().setUser(user).setContent("A"));
 			
 			userRepository.flush();
 			postRepository.flush();
 		}
 
-		log.info("----------------");
-		log.info("Only ID");
+		log.error("------------------------");
 		
 		{
 			for (Post post : postRepository.findAll()) {
-				System.out.println(post.getUser().getId());
-			}
-		}
-
-		log.info("----------------");
-		log.info("Name");
-		
-		{
-			for (Post post : postRepository.findAll()) {
-				System.out.println(post.getUser().getName());
+				log.info("Before print");
+				log.error("{}", post.getUser().getIdx());
+				log.error("{}", post.getUser().getId());
+				log.error("{}", post.getUser().getIdAsString());
+				log.info("After print");
+				final var user = post.getUser();
+				System.out.println();
 			}
 		}
 	}

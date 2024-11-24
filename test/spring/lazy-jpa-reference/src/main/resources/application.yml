@@ -2,9 +2,9 @@ logging:
   level:
     root: INFO
     datacrunch: DEBUG
-    org:
-      hibernate:
-        type: trace
+#    org:
+#      hibernate:
+#        type: trace
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/jpa_test?createDatabaseIfNotExist=true&useSSL=false&useUnicode=true&characterEncoding=utf8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC

@@ -10,11 +10,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 @Entity
 @Table
 @Data
+@ToString(doNotUseGetters = true)
 @Accessors(chain = true)
 public class Post {
 	
