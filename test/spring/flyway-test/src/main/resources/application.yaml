@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: flyway-test
+  datasource:
+    url: jdbc:mysql://localhost:3306/${spring.application.name}?createDatabaseIfNotExist=true&useSSL=false&useUnicode=true&characterEncoding=utf8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: password
+  jpa:
+    database: MYSQL
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    show-sql: false #true
+#    show-sql: true #false
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        enable_lazy_load_no_trans: true
+flyway:
+  baseline-on-migrate: true
+  ignoreMigrationPatterns: 
