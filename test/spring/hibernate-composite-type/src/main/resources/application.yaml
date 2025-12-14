@@ -1,0 +1,22 @@
+logging:
+  include-application-name: false
+spring:
+  application:
+    name: hibernate-composite-type
+  datasource:
+    url: jdbc:mysql://${DATABASE_HOST:localhost}:${DATABASE_PORT:3306}/${DATABASE_NAME:${spring.application.name}}?createDatabaseIfNotExist=true&useSSL=false&useUnicode=true&characterEncoding=utf8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: ${DATABASE_USER:root}
+    password: ${DATABASE_PASSWORD:password}
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+#      ddl-auto: validate
+#    show-sql: false #true
+    show-sql: true #false
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        enable_lazy_load_no_trans: true
+# debug: true
