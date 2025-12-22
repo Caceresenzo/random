@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: env-parsing-test
+  config:
+    import: optional:file:.local[.properties]
